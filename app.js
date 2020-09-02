@@ -16,7 +16,9 @@ var search = require('./routes/search');
 var popular = require('./routes/popular');
 var anticipated = require('./routes/anticipated');
 var genres = require('./routes/genres');
-var list = require('./routes/list')
+var list = require('./routes/list');
+var cast = require('./routes/cast');
+var episode = require('./routes/episode');
 var app = express();
 
 // view engine setup
@@ -43,7 +45,8 @@ app.use('/popular', popular);
 app.use('/anticipated', anticipated);
 app.use('/list', list);
 app.use('/genres', genres);
-
+app.use('/cast', cast);
+app.use('/episode', episode);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
