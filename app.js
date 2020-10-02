@@ -20,6 +20,7 @@ var list = require('./routes/list');
 var cast = require('./routes/cast');
 var episode = require('./routes/episode');
 var next = require('./routes/next');
+var comments = require('./routes/comments');
 var app = express();
 
 // view engine setup
@@ -49,7 +50,7 @@ app.use('/genres', genres);
 app.use('/cast', cast);
 app.use('/episode', episode);
 app.use('/next', next);
-
+app.use('/comments', comments);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
